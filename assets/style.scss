@@ -1,5 +1,9 @@
 @media screen {
-    body{background-color:rgb(55, 50, 59);}
+    body{
+        background-color:rgb(55, 50, 59);
+        font-size: 3em;
+        font-family: 'Agency FB';
+    }
 }
 
 %box-default-size{
@@ -7,11 +11,11 @@
     height: 850px;
     position:absolute;
     box-sizing: border-box;
+    
 }
 
 %flex-position{
-    display: flex;
-    justify-content: center;
+    align-self: center;
     margin-top: 10%;
 }
 %transition-settings{
@@ -24,17 +28,42 @@
     -o-transition: filter 2s ease-in-out; 
 }
 section{
-    @extend %flex-position;
-    transform: scale(2);
      #cf {
-         position: relative;
-         z-index:1;
+        z-index:1;
          img{
+            transform: scale(1.5);
+            align-content: center;
+            margin-top: 0;
+            left: 500px;
             @extend %box-default-size;
          }
-     }
+     } 
 }
-
+article{
+    background-color: rgb(143, 42, 42);
+    border-radius: 20px;
+    border: 15px solid black;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    margin-left: 181px;
+    margin-top: 700px;
+    height: 445px;
+    width:1835px;
+    
+}
+hr{
+    width: 100%;
+}
+h1,h2,h3,p{
+    margin: 5px 0 0 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 //top image filter transition works only when there's no opacity transition on bottom image.
 #cf img.top{
     filter:grayscale(0%);

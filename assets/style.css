@@ -1,6 +1,8 @@
 @media screen {
   body {
     background-color: rgb(55, 50, 59);
+    font-size: 3em;
+    font-family: "Agency FB";
   }
 }
 section #cf img {
@@ -10,23 +12,47 @@ section #cf img {
   box-sizing: border-box;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 10%;
-}
-
 #cf img.bottom {
   transition: opacity 2s ease-in-out;
 }
 
-section {
-  transform: scale(2);
-}
 section #cf {
-  position: relative;
   z-index: 1;
 }
+section #cf img {
+  transform: scale(1.5);
+  align-content: center;
+  margin-top: 0;
+  left: 500px;
+}
+
+article {
+  background-color: rgb(143, 42, 42);
+  border-radius: 20px;
+  border: 15px solid black;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  margin-left: 181px;
+  margin-top: 700px;
+  height: 445px;
+  width: 1835px;
+}
+
+hr {
+  width: 100%;
+}
+
+h1, h2, h3, p {
+  margin: 5px 0 0 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 #cf img.top {
   filter: grayscale(0%);
   transition: filter 2s ease-in-out;
