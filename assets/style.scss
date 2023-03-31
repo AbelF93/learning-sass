@@ -1,3 +1,49 @@
 @media screen {
-    body{background-color:blueviolet;}
+    body{background-color:rgb(55, 50, 59);}
 }
+
+%box-default-size{
+    width: 1240px;
+    height: 850px;
+    position:absolute;
+    box-sizing: border-box;
+}
+
+%flex-position{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+%transition-settings{
+    transition: opacity 2s ease-in-out;
+}
+%transition-filter{
+    transition: filter 2s ease-in-out;
+    -webkit-transition: filter 2s ease-in-out; 
+    -moz-transition: filter 2s ease-in-out;
+    -o-transition: filter 2s ease-in-out; 
+}
+section{
+    @extend %flex-position;
+    transform: scale(2);
+     #cf {
+         position: relative;
+         z-index:1;
+         img{
+            @extend %box-default-size;
+         }
+     }
+}
+
+//top image filter transition works only when there's no opacity transition on bottom image.
+#cf img.top{
+    filter:grayscale(0%);
+    transition: filter 2s ease-in-out;
+    &:hover::before{filter:grayscale(100%);}
+ }
+#cf img.bottom {
+    opacity: 1;
+    @extend %transition-settings;
+    &:hover{opacity: 0;}
+}
+

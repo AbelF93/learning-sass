@@ -1,5 +1,43 @@
 @media screen {
   body {
-    background-color: blueviolet;
+    background-color: rgb(55, 50, 59);
   }
+}
+section #cf img {
+  width: 1240px;
+  height: 850px;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+#cf img.bottom {
+  transition: opacity 2s ease-in-out;
+}
+
+section {
+  transform: scale(2);
+}
+section #cf {
+  position: relative;
+  z-index: 1;
+}
+#cf img.top {
+  filter: grayscale(0%);
+  transition: filter 2s ease-in-out;
+}
+#cf img.top:hover::before {
+  filter: grayscale(100%);
+}
+
+#cf img.bottom {
+  opacity: 1;
+}
+#cf img.bottom:hover {
+  opacity: 0;
 }
